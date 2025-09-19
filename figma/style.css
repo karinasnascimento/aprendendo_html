@@ -1,0 +1,84 @@
+/* Body: Configuração geral da página */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main   aside"
+        "footer footer";
+    grid-template-rows: auto 1fr auto; /*Cabeçalho, conteúdo e rodapé*/
+    grid-template-columns: 3fr 1fr; /*main ocupa 3 partes e aside 1*/
+    font-family: Arial, sans-serif;
+    background-color:khaki;
+    height: 100vh;
+}
+
+/* Header: Cabeçalho da página */
+header {
+    grid-area: header;
+    background-color:midnightblue;
+    color:white; /*cor do título*/
+    padding: 15px; /*Cria distância entre o conteúdo do elemento e a sua borda*/
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+nav ul {
+    background-color:khaki;
+    list-style: none;
+    display: flex; /*Deixa os links lado a lado*/
+}
+
+nav ul li {
+    margin-left: 20px; /*Margem (tamanho) do quadro nav*/
+}
+
+nav ul li a {
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main: Contêiner principal do conteúdo */
+main {
+    grid-area: main;
+    flex-grow: 1; /*Para ocupar a maior parte do espaço*/
+    padding: 20px;
+    margin-top: 20px; /*Cria espaço entre o elemento escolhido e o de cima*/
+    background-color:midnightblue;
+}
+
+/* Article: Cada conteúdo independente */
+article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;/*Cria espaço entre o elemento escolhido e o de baixo*/
+}
+
+/* Aside: Barra lateral com conteúdo extra */
+aside {
+    grid-area: aside;
+    width: 300px; /*Largura*/
+    background-color:black;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+aside h2 {
+    color:white;
+}
+
+/* Footer: Rodapé da página */
+footer {
+    grid-area: footer;
+    background-color:midnightblue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
